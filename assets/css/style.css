@@ -1,14 +1,16 @@
+/* fade in up animation */
 @keyframes fadeInUp {
-  from {
+  0% {
     opacity: 0;
-    transform: translateY(30px);
+    transform: translateY(18px);
   }
-  to {
+  100% {
     opacity: 1;
     transform: translateY(0);
   }
 }
 
+/* fade in slide animation */
 @keyframes fadeInSlide {
   from {
     opacity: 0;
@@ -21,7 +23,7 @@
 }
 
 .fade-in-up {
-  animation: fadeInUp 0.8s ease-out forwards;
+  animation: fadeInUp 0.9s ease forwards;
 }
 
 .fade-in-slide,
@@ -29,22 +31,34 @@
   animation: fadeInSlide 0.8s ease-out;
 }
 
-.menu-link {
+/* animated underline for menu */
+.menu-link,
+.menu-hover {
   position: relative;
+  padding-bottom: 4px;
+  transition: color 0.25s ease;
 }
 
-.menu-link::after {
+.menu-link::after,
+.menu-hover::after {
   content: "";
   position: absolute;
-  width: 0;
-  height: 2px;
-  bottom: -5px;
   left: 0;
-  background-color: currentColor;
-  transition: width 0.3s ease;
+  bottom: 0;
+  width: 0%;
+  height: 3px;
+  background: currentColor;
+  border-radius: 6px;
+  transition: width 0.28s ease;
 }
 
-.menu-link:hover::after {
+.menu-link:hover,
+.menu-hover:hover {
+  color: #ff7b00;
+}
+
+.menu-link:hover::after,
+.menu-hover:hover::after {
   width: 100%;
 }
 
