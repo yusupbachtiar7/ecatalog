@@ -70,64 +70,69 @@
     <section
       class="pt-20 pb-12 bg-gradient-to-b from-orange-50 via-white to-white"
     >
-      <div class="max-w-7xl mx-auto px-6">
-        <!-- Image Slider -->
-        <div
-          class="relative h-[clamp(40vh,55vh,70vh)] rounded-3xl overflow-hidden shadow-2xl mb-12"
-        >
-          <div id="slider" class="w-full h-full">
-            <div class="min-w-full h-full relative">
-              <img
-                src="https://images.unsplash.com/photo-1495521821757-a1efb6729352?auto=format&fit=crop&w=1400&q=80"
-                alt="Hidangan Nasi Goreng Spesial"
-                class="min-w-full h-full object-cover"
-                loading="lazy"
-              />
-            </div>
-            <div class="min-w-full h-full relative">
-              <img
-                src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1400&q=80"
-                alt="Makanan Sate Ayam Lezat"
-                class="min-w-full h-full object-cover"
-                loading="lazy"
-              />
-            </div>
-            <div class="min-w-full h-full relative">
-              <img
-                src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=1400&q=80"
-                alt="Hidangan Ayam Bakar Istimewa"
-                class="min-w-full h-full object-cover"
-                loading="lazy"
-              />
-            </div>
-          </div>
-
-          <!-- Slider Navigation Dots -->
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-10">
+        <!-- SLIDER — kiri kanan sudah match dengan deskripsi -->
+        <div class="mt-4 md:mt-6 lg:mt-8 w-[85%] mx-auto">
           <div
-            class="absolute left-1/2 -translate-x-1/2 bottom-6 flex gap-3"
-            role="tablist"
+            class="relative h-[clamp(40vh,55vh,70vh)] rounded-3xl overflow-hidden shadow-2xl mb-12"
           >
-            <button
-              aria-label="Slide 1"
-              aria-selected="true"
-              data-index="0"
-              class="w-4 h-4 rounded-full bg-white shadow-lg border-2 border-white cursor-pointer hover:scale-125 hover:bg-orange-400 transition-all duration-300"
-              role="tab"
-            ></button>
-            <button
-              aria-label="Slide 2"
-              aria-selected="false"
-              data-index="1"
-              class="w-4 h-4 rounded-full bg-white/60 shadow-lg border-2 border-white cursor-pointer hover:scale-125 hover:bg-orange-400 transition-all duration-300"
-              role="tab"
-            ></button>
-            <button
-              aria-label="Slide 3"
-              aria-selected="false"
-              data-index="2"
-              class="w-4 h-4 rounded-full bg-white/60 shadow-lg border-2 border-white cursor-pointer hover:scale-125 hover:bg-orange-400 transition-all duration-300"
-              role="tab"
-            ></button>
+            <div
+              id="slider"
+              class="w-full h-full flex transition-transform duration-700"
+            >
+              <div class="min-w-full h-full relative">
+                <img
+                  src="https://images.unsplash.com/photo-1495521821757-a1efb6729352?auto=format&fit=crop&w=1400&q=80"
+                  alt="Hidangan Nasi Goreng Spesial"
+                  class="min-w-full h-full object-cover"
+                  loading="lazy"
+                />
+              </div>
+              <div class="min-w-full h-full relative">
+                <img
+                  src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1400&q=80"
+                  alt="Makanan Sate Ayam Lezat"
+                  class="min-w-full h-full object-cover"
+                  loading="lazy"
+                />
+              </div>
+              <div class="min-w-full h-full relative">
+                <img
+                  src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=1400&q=80"
+                  alt="Hidangan Ayam Bakar Istimewa"
+                  class="min-w-full h-full object-cover"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+
+            <!-- dots -->
+            <div
+              class="absolute left-1/2 -translate-x-1/2 bottom-6 flex gap-3"
+              role="tablist"
+            >
+              <button
+                aria-label="Slide 1"
+                aria-selected="true"
+                data-index="0"
+                class="w-4 h-4 rounded-full bg-white shadow-lg border-2 border-white cursor-pointer hover:scale-125 hover:bg-orange-400 transition-all duration-300"
+                role="tab"
+              ></button>
+              <button
+                aria-label="Slide 2"
+                aria-selected="false"
+                data-index="1"
+                class="w-4 h-4 rounded-full bg-white/60 shadow-lg border-2 border-white cursor-pointer hover:scale-125 hover:bg-orange-400 transition-all duration-300"
+                role="tab"
+              ></button>
+              <button
+                aria-label="Slide 3"
+                aria-selected="false"
+                data-index="2"
+                class="w-4 h-4 rounded-full bg-white/60 shadow-lg border-2 border-white cursor-pointer hover:scale-125 hover:bg-orange-400 transition-all duration-300"
+                role="tab"
+              ></button>
+            </div>
           </div>
         </div>
 
@@ -183,7 +188,7 @@
 
     <!-- ======== MENU PRODUCTS ======== -->
     <section id="produk" class="py-20 bg-gray-50">
-      <div class="max-w-7xl mx-auto px-6">
+      <div class="max-w-6xl w-[85%] mx-auto px-4 sm:px-6">
         <h2 class="text-4xl font-extrabold text-center mb-4 text-gray-900">
           Menu Kami
         </h2>
@@ -304,7 +309,7 @@
 
     <!-- ======== LAYANAN / SERVICES ======== -->
     <section id="layanan" class="py-20 bg-white">
-      <div class="max-w-7xl mx-auto px-6">
+      <div class="max-w-6xl w-[85%] mx-auto px-4 sm:px-6">
         <h2 class="text-4xl font-extrabold text-center mb-4 text-gray-900">
           Layanan Kami
         </h2>
@@ -363,7 +368,7 @@
 
     <!-- ======== ULASAN / REVIEWS ======== -->
     <section id="review" class="py-20 bg-gray-50">
-      <div class="max-w-7xl mx-auto px-6">
+      <div class="max-w-6xl w-[85%] mx-auto px-4 sm:px-6">
         <h2 class="text-4xl font-extrabold text-center mb-4 text-gray-900">
           Review Pelanggan
         </h2>
@@ -420,7 +425,7 @@
 
     <!-- ======== CONTACT SECTION ======== -->
     <section id="kontak" class="py-20 bg-white">
-      <div class="max-w-7xl mx-auto px-6">
+      <div class="max-w-6xl w-[85%] mx-auto px-4 sm:px-6">
         <h2 class="text-4xl font-extrabold text-center mb-4 text-gray-900">
           Hubungi Kami
         </h2>
@@ -556,7 +561,7 @@
 
     <!-- ======== FOOTER ======== -->
     <footer class="bg-gray-900 text-white text-center py-8">
-      <div class="max-w-7xl mx-auto px-6">
+      <div class="max-w-6xl w-[85%] mx-auto px-4 sm:px-6">
         <p>&copy; 2025 Restoran Lezat. Semua hak dilindungi.</p>
         <p class="text-gray-400 text-sm mt-2">
           Dibuat dengan ❤️ untuk pelanggan setia kami
