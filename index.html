@@ -17,65 +17,53 @@
     <link rel="stylesheet" href="assets/css/style.css" />
   </head>
   <body class="antialiased text-gray-900">
-    <!-- ======== HEADER ======== -->
+    <!-- HEADER -->
     <header
-      class="fixed top-0 w-full bg-white/80 backdrop-blur z-50 border-b border-gray-100"
+      class="fixed inset-x-0 top-0 z-50 bg-white/80 backdrop-blur-md shadow-sm"
     >
       <div
-        class="max-w-7xl mx-auto px-6 flex items-center justify-between h-16"
+        class="max-w-6xl mx-auto flex items-center justify-between px-10 lg:px-14 py-4"
       >
-        <a href="#" class="font-bold text-2xl text-orange-600"
-          >Restoran Lezat</a
-        >
-        <nav class="hidden md:flex gap-8" aria-label="Navigasi utama">
-          <a
-            href="#produk"
-            class="menu-link text-gray-700 hover:text-orange-600 font-medium transition"
-            >Menu</a
-          >
-          <a
-            href="#layanan"
-            class="menu-link text-gray-700 hover:text-orange-600 font-medium transition"
-            >Layanan</a
-          >
-          <a
-            href="#kontak"
-            class="menu-link text-gray-700 hover:text-orange-600 font-medium transition"
-            >Kontak</a
-          >
-        </nav>
+        <!-- logo only -->
+        <a href="#" class="flex items-center gap-3">
+          <img
+            src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=200&q=80"
+            alt="Logo"
+            class="w-12 h-12 rounded-full object-cover"
+          />
+        </a>
+
+        <!-- Desktop Menu -->
+        <ul class="hidden md:flex space-x-10 text-lg font-medium">
+          <li><a href="#home" class="menu-link">Beranda</a></li>
+          <li><a href="#produk" class="menu-link">Menu</a></li>
+          <li><a href="#layanan" class="menu-link">Layanan</a></li>
+          <li><a href="#review" class="menu-link">Review</a></li>
+          <li><a href="#kontak" class="menu-link">Kontak</a></li>
+        </ul>
+
+        <!-- Mobile Button -->
         <button
           id="menuBtn"
-          aria-expanded="false"
-          aria-label="Buka menu navigasi"
-          class="md:hidden p-2 rounded-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-500"
+          class="md:hidden flex flex-col space-y-1 focus:outline-none"
         >
-          ☰
+          <span class="w-6 h-0.5 bg-gray-800"></span>
+          <span class="w-6 h-0.5 bg-gray-800"></span>
+          <span class="w-6 h-0.5 bg-gray-800"></span>
         </button>
       </div>
-      <nav
+
+      <!-- Mobile Menu -->
+      <div
         id="mobileMenu"
-        class="hidden md:hidden border-t border-gray-100 bg-white"
-        aria-label="Navigasi mobile"
+        class="hidden flex flex-col bg-white border-t px-10 pb-6 space-y-4 text-lg animate-fadeIn"
       >
-        <div class="px-6 py-4 space-y-2">
-          <a
-            href="#produk"
-            class="block py-2 text-gray-700 hover:text-orange-600"
-            >Menu</a
-          >
-          <a
-            href="#layanan"
-            class="block py-2 text-gray-700 hover:text-orange-600"
-            >Layanan</a
-          >
-          <a
-            href="#kontak"
-            class="block py-2 text-gray-700 hover:text-orange-600"
-            >Kontak</a
-          >
-        </div>
-      </nav>
+        <a href="#home" class="mobile-link">Beranda</a>
+        <a href="#produk" class="mobile-link">Menu</a>
+        <a href="#layanan" class="mobile-link">Layanan</a>
+        <a href="#review" class="mobile-link">Review</a>
+        <a href="#kontak" class="mobile-link">Kontak</a>
+      </div>
     </header>
 
     <!-- ======== HERO SECTION ======== -->
