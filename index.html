@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Nikmati hidangan lezat disiapkan segar setiap hari. Pesan cepat via WhatsApp — tersedia Dine-In, Takeaway, dan Delivery."
+    />
+    <meta
+      name="keywords"
+      content="restoran, menu, makanan, pesan online, WhatsApp, delivery"
+    />
+    <meta name="author" content="Restoran Lezat" />
+    <title>Restoran Lezat — Katalog Premium</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body class="antialiased text-gray-900">
+    <!-- ======== HEADER ======== -->
+    <header
+      class="fixed top-0 w-full bg-white/80 backdrop-blur z-50 border-b border-gray-100"
+    >
+      <div
+        class="max-w-7xl mx-auto px-6 flex items-center justify-between h-16"
+      >
+        <a href="#" class="font-bold text-2xl text-orange-600"
+          >Restoran Lezat</a
+        >
+        <nav class="hidden md:flex gap-8" aria-label="Navigasi utama">
+          <a
+            href="#produk"
+            class="menu-link text-gray-700 hover:text-orange-600 font-medium transition"
+            >Menu</a
+          >
+          <a
+            href="#layanan"
+            class="menu-link text-gray-700 hover:text-orange-600 font-medium transition"
+            >Layanan</a
+          >
+          <a
+            href="#kontak"
+            class="menu-link text-gray-700 hover:text-orange-600 font-medium transition"
+            >Kontak</a
+          >
+        </nav>
+        <button
+          id="menuBtn"
+          aria-expanded="false"
+          aria-label="Buka menu navigasi"
+          class="md:hidden p-2 rounded-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-500"
+        >
+          ☰
+        </button>
+      </div>
+      <nav
+        id="mobileMenu"
+        class="hidden md:hidden border-t border-gray-100 bg-white"
+        aria-label="Navigasi mobile"
+      >
+        <div class="px-6 py-4 space-y-2">
+          <a
+            href="#produk"
+            class="block py-2 text-gray-700 hover:text-orange-600"
+            >Menu</a
+          >
+          <a
+            href="#layanan"
+            class="block py-2 text-gray-700 hover:text-orange-600"
+            >Layanan</a
+          >
+          <a
+            href="#kontak"
+            class="block py-2 text-gray-700 hover:text-orange-600"
+            >Kontak</a
+          >
+        </div>
+      </nav>
+    </header>
+
+    <!-- ======== HERO SECTION ======== -->
+    <section
+      class="pt-20 pb-12 bg-gradient-to-b from-orange-50 via-white to-white"
+    >
+      <div class="max-w-7xl mx-auto px-6">
+        <!-- Image Slider -->
+        <div
+          class="relative h-[clamp(40vh,55vh,70vh)] rounded-3xl overflow-hidden shadow-2xl mb-12"
+        >
+          <div id="slider" class="w-full h-full">
+            <div class="min-w-full h-full relative">
+              <img
+                src="https://images.unsplash.com/photo-1495521821757-a1efb6729352?auto=format&fit=crop&w=1400&q=80"
+                alt="Hidangan Nasi Goreng Spesial"
+                class="min-w-full h-full object-cover"
+                loading="lazy"
+              />
+            </div>
+            <div class="min-w-full h-full relative">
+              <img
+                src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1400&q=80"
+                alt="Makanan Sate Ayam Lezat"
+                class="min-w-full h-full object-cover"
+                loading="lazy"
+              />
+            </div>
+            <div class="min-w-full h-full relative">
+              <img
+                src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=1400&q=80"
+                alt="Hidangan Ayam Bakar Istimewa"
+                class="min-w-full h-full object-cover"
+                loading="lazy"
+              />
+            </div>
+          </div>
+
+          <!-- Slider Navigation Dots -->
+          <div
+            class="absolute left-1/2 -translate-x-1/2 bottom-6 flex gap-3"
+            role="tablist"
+          >
+            <button
+              aria-label="Slide 1"
+              aria-selected="true"
+              data-index="0"
+              class="w-4 h-4 rounded-full bg-white shadow-lg border-2 border-white cursor-pointer hover:scale-125 hover:bg-orange-400 transition-all duration-300"
+              role="tab"
+            ></button>
+            <button
+              aria-label="Slide 2"
+              aria-selected="false"
+              data-index="1"
+              class="w-4 h-4 rounded-full bg-white/60 shadow-lg border-2 border-white cursor-pointer hover:scale-125 hover:bg-orange-400 transition-all duration-300"
+              role="tab"
+            ></button>
+            <button
+              aria-label="Slide 3"
+              aria-selected="false"
+              data-index="2"
+              class="w-4 h-4 rounded-full bg-white/60 shadow-lg border-2 border-white cursor-pointer hover:scale-125 hover:bg-orange-400 transition-all duration-300"
+              role="tab"
+            ></button>
+          </div>
+        </div>
+
+        <!-- Hero Description with CTA -->
+        <article
+          class="bg-gradient-to-br from-white to-gray-50 rounded-3xl shadow-2xl p-8 md:p-12 lg:p-16 max-w-5xl mx-auto fade-in-up border-2 border-orange-100"
+        >
+          <div class="grid md:grid-cols-2 gap-10 items-center">
+            <div>
+              <h2
+                class="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-gray-900 leading-tight"
+              >
+                Hidangan Lezat
+                <span class="text-orange-500">Setiap Hari</span>
+              </h2>
+              <p class="text-gray-600 text-lg leading-relaxed mb-8 typing-text">
+                Nikmati hidangan autentik yang disiapkan segar setiap hari oleh
+                chef berpengalaman kami. Dengan bahan-bahan pilihan berkualitas
+                premium dan resep rahasia turun temurun, kami menghadirkan cita
+                rasa restoran ke meja makan Anda.
+              </p>
+              <div class="flex flex-col sm:flex-row gap-4">
+                <a
+                  href="#produk"
+                  class="bg-gradient-to-r from-orange-500 to-red-600 text-white font-bold py-3 px-8 rounded-full shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 text-center"
+                >
+                  🍽️ Lihat Menu
+                </a>
+                <a
+                  href="https://wa.me/6281234567890"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="bg-green-500 text-white font-bold py-3 px-8 rounded-full shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 text-center"
+                >
+                  💬 Pesan Sekarang
+                </a>
+              </div>
+            </div>
+            <div class="relative">
+              <div
+                class="absolute inset-0 bg-gradient-to-r from-orange-300 to-red-300 rounded-3xl blur-2xl opacity-30"
+              ></div>
+              <img
+                src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=500&q=80"
+                alt="Interior Restoran Lezat yang Nyaman"
+                class="relative rounded-3xl shadow-2xl border-4 border-white hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ======== MENU PRODUCTS ======== -->
+    <section id="produk" class="py-20 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-6">
+        <h2 class="text-4xl font-extrabold text-center mb-4 text-gray-900">
+          Menu Kami
+        </h2>
+        <p class="text-center text-gray-600 mb-12">
+          Pilihan menu lengkap yang siap memanjakan lidah Anda
+        </p>
+
+        <!-- Filter & Search -->
+        <div
+          class="flex flex-col md:flex-row gap-4 mb-10 items-center justify-between"
+        >
+          <div class="flex gap-3 flex-wrap" id="menu-tabs" role="tablist">
+            <button
+              class="tab-btn active px-5 py-2 rounded-full font-semibold bg-green-500 text-white transition"
+              data-cat="fav"
+              role="tab"
+              aria-selected="true"
+            >
+              Favorit
+            </button>
+            <button
+              class="tab-btn px-5 py-2 rounded-full font-semibold bg-gray-200 text-gray-800 hover:bg-gray-300 transition"
+              data-cat="drink"
+              role="tab"
+              aria-selected="false"
+            >
+              Minuman
+            </button>
+            <button
+              class="tab-btn px-5 py-2 rounded-full font-semibold bg-gray-200 text-gray-800 hover:bg-gray-300 transition"
+              data-cat="snack"
+              role="tab"
+              aria-selected="false"
+            >
+              Snack
+            </button>
+          </div>
+
+          <input
+            id="menuSearch"
+            type="search"
+            placeholder="Cari menu..."
+            class="px-4 py-2 rounded-full border-2 border-gray-300 w-full md:w-64 focus:border-green-500 focus:ring-2 focus:ring-green-200 outline-none transition"
+            aria-label="Cari menu makanan"
+          />
+        </div>
+
+        <section
+          id="menu-container"
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          aria-live="polite"
+          aria-label="Daftar menu"
+        ></section>
+
+        <!-- Load More Button -->
+        <div class="flex justify-center mt-12">
+          <button
+            id="loadMore"
+            class="px-6 py-3 rounded-full bg-gray-300 hover:bg-gray-400 font-semibold transition"
+            aria-label="Muat lebih banyak menu"
+          >
+            Muat Lebih Banyak
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======== PRODUCT PREVIEW MODAL ======== -->
+    <dialog
+      id="previewModal"
+      class="fixed inset-0 bg-black/50 hidden items-center justify-center z-50"
+      aria-labelledby="modalTitle"
+    >
+      <article
+        class="bg-white rounded-2xl shadow-2xl w-11/12 md:w-2/3 lg:w-1/2 overflow-hidden"
+      >
+        <div class="grid md:grid-cols-2">
+          <div class="p-6 flex items-center justify-center bg-gray-100">
+            <img
+              id="modalImg"
+              src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="
+              alt="Preview"
+              class="max-h-96 object-cover rounded-lg"
+            />
+          </div>
+          <div class="p-8 flex flex-col gap-6">
+            <div>
+              <h3 id="modalTitle" class="text-2xl font-bold text-gray-900">
+                Nama Produk
+              </h3>
+              <p
+                id="modalBadge"
+                class="text-sm font-semibold text-yellow-600 mt-2"
+              ></p>
+            </div>
+            <p id="modalDesc" class="text-gray-600 leading-relaxed"></p>
+            <div class="flex gap-3 mt-auto">
+              <a
+                id="modalWA"
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="flex-1 bg-green-600 text-white px-4 py-3 rounded-xl font-semibold text-center hover:bg-green-700 transition"
+              >
+                Pesan via WhatsApp
+              </a>
+              <button
+                id="modalClose"
+                class="px-6 py-3 rounded-xl border-2 border-gray-300 hover:bg-gray-100 transition font-semibold"
+              >
+                Tutup
+              </button>
+            </div>
+          </div>
+        </div>
+      </article>
+    </dialog>
+
+    <!-- ======== LAYANAN / SERVICES ======== -->
+    <section id="layanan" class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-6">
+        <h2 class="text-4xl font-extrabold text-center mb-4 text-gray-900">
+          Layanan Kami
+        </h2>
+        <p class="text-center text-gray-600 mb-12">
+          Berbagai pilihan layanan untuk kenyamanan Anda
+        </p>
+
+        <div class="grid md:grid-cols-3 gap-8">
+          <article
+            class="bg-gray-50 p-8 rounded-3xl text-center hover:shadow-xl transition border border-gray-200"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1541542684-9c7f1e5fb9b6?auto=format&fit=crop&w=200&q=80"
+              alt="Dine In Service"
+              class="w-20 h-20 rounded-full mx-auto mb-4 object-cover"
+            />
+            <h3 class="text-xl font-bold mb-3 text-gray-900">Dine In</h3>
+            <p class="text-gray-600">
+              Santai & nikmati hidangan hangat di tempat — layanan ramah dan
+              suasana hangat menanti Anda.
+            </p>
+          </article>
+
+          <article
+            class="bg-gray-50 p-8 rounded-3xl text-center hover:shadow-xl transition border border-gray-200"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=200&q=80"
+              alt="Take Away Service"
+              class="w-20 h-20 rounded-full mx-auto mb-4 object-cover"
+            />
+            <h3 class="text-xl font-bold mb-3 text-gray-900">Take Away</h3>
+            <p class="text-gray-600">
+              Pesan lewat WhatsApp lalu ambil tanpa antre panjang — cepat &
+              praktis.
+            </p>
+          </article>
+
+          <article
+            class="bg-gray-50 p-8 rounded-3xl text-center hover:shadow-xl transition border border-gray-200"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1556742044-3c52d6e88c62?auto=format&fit=crop&w=200&q=80"
+              alt="Delivery Service"
+              class="w-20 h-20 rounded-full mx-auto mb-4 object-cover"
+            />
+            <h3 class="text-xl font-bold mb-3 text-gray-900">Delivery</h3>
+            <p class="text-gray-600">
+              Kirim hangat ke alamat Anda dengan mitra pengiriman terpercaya —
+              terlacak dan rapi.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======== ULASAN / REVIEWS ======== -->
+    <section id="review" class="py-20 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-6">
+        <h2 class="text-4xl font-extrabold text-center mb-4 text-gray-900">
+          Review Pelanggan
+        </h2>
+        <p class="text-center text-gray-600 mb-12">
+          Kepuasan pelanggan adalah prioritas kami
+        </p>
+
+        <div class="grid md:grid-cols-3 gap-8">
+          <article
+            class="bg-white p-8 rounded-3xl text-center shadow-lg hover:shadow-xl transition border border-gray-200"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1545996124-1f8b2f6d7a81?auto=format&fit=crop&w=120&q=80"
+              alt="Foto Andi"
+              class="w-16 h-16 rounded-full mx-auto mb-4 object-cover"
+            />
+            <blockquote class="italic text-gray-700 mb-4">
+              "Makanannya super lezat! Wajib coba produk favorit mereka."
+            </blockquote>
+            <footer class="font-bold text-gray-900">— Andi</footer>
+          </article>
+
+          <article
+            class="bg-white p-8 rounded-3xl text-center shadow-lg hover:shadow-xl transition border border-gray-200"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=120&q=80"
+              alt="Foto Sinta"
+              class="w-16 h-16 rounded-full mx-auto mb-4 object-cover"
+            />
+            <blockquote class="italic text-gray-700 mb-4">
+              "Tempat bersih, nyaman, dan pelayanan sangat cepat. Rekomendasi!"
+            </blockquote>
+            <footer class="font-bold text-gray-900">— Sinta</footer>
+          </article>
+
+          <article
+            class="bg-white p-8 rounded-3xl text-center shadow-lg hover:shadow-xl transition border border-gray-200"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=120&q=80"
+              alt="Foto Rian"
+              class="w-16 h-16 rounded-full mx-auto mb-4 object-cover"
+            />
+            <blockquote class="italic text-gray-700 mb-4">
+              "Banyak pilihan menu dan bisa pesan lewat WhatsApp. Sangat
+              praktis!"
+            </blockquote>
+            <footer class="font-bold text-gray-900">— Rian</footer>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======== CONTACT SECTION ======== -->
+    <section id="kontak" class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-6">
+        <h2 class="text-4xl font-extrabold text-center mb-4 text-gray-900">
+          Hubungi Kami
+        </h2>
+        <p class="text-center text-gray-600 mb-12">
+          Kami siap melayani Anda 24/7
+        </p>
+
+        <div class="grid lg:grid-cols-2 gap-12">
+          <!-- Contact Information -->
+          <div class="space-y-6">
+            <article
+              class="bg-gradient-to-r from-green-50 to-white p-6 rounded-2xl border border-green-200 hover:shadow-lg transition"
+            >
+              <div class="flex gap-4 items-start">
+                <div
+                  class="bg-green-100 text-green-600 p-3 rounded-full text-2xl flex-shrink-0"
+                >
+                  💬
+                </div>
+                <div>
+                  <h3 class="font-bold text-lg text-gray-900">WhatsApp</h3>
+                  <a
+                    href="https://wa.me/6281234567890"
+                    class="text-green-600 hover:text-green-700 font-semibold transition"
+                  >
+                    Hubungi: +62-812-3456-7890
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <article
+              class="bg-gradient-to-r from-pink-50 to-white p-6 rounded-2xl border border-pink-200 hover:shadow-lg transition"
+            >
+              <div class="flex gap-4 items-start">
+                <div
+                  class="bg-pink-100 text-pink-600 p-3 rounded-full text-2xl flex-shrink-0"
+                >
+                  📷
+                </div>
+                <div>
+                  <h3 class="font-bold text-lg text-gray-900">Instagram</h3>
+                  <a
+                    href="https://instagram.com/restorantulezat"
+                    class="text-pink-600 hover:text-pink-700 font-semibold transition"
+                  >
+                    @restorantulezat
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <article
+              class="bg-gradient-to-r from-blue-50 to-white p-6 rounded-2xl border border-blue-200 hover:shadow-lg transition"
+            >
+              <div class="flex gap-4 items-start">
+                <div
+                  class="bg-blue-100 text-blue-600 p-3 rounded-full text-2xl flex-shrink-0"
+                >
+                  📘
+                </div>
+                <div>
+                  <h3 class="font-bold text-lg text-gray-900">Facebook</h3>
+                  <a
+                    href="https://facebook.com/restorantulezat"
+                    class="text-blue-600 hover:text-blue-700 font-semibold transition"
+                  >
+                    Restoran Lezat
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <article
+              class="bg-gradient-to-r from-yellow-50 to-white p-6 rounded-2xl border border-yellow-200 hover:shadow-lg transition"
+            >
+              <div class="flex gap-4 items-start">
+                <div
+                  class="bg-yellow-100 text-yellow-600 p-3 rounded-full text-2xl flex-shrink-0"
+                >
+                  📍
+                </div>
+                <div>
+                  <h3 class="font-bold text-lg text-gray-900">Alamat</h3>
+                  <p class="text-gray-600">
+                    Jalan Merdeka No. 123, Jakarta Pusat, 12345
+                  </p>
+                </div>
+              </div>
+            </article>
+
+            <article
+              class="bg-gradient-to-r from-purple-50 to-white p-6 rounded-2xl border border-purple-200 hover:shadow-lg transition"
+            >
+              <div class="flex gap-4 items-start">
+                <div
+                  class="bg-purple-100 text-purple-600 p-3 rounded-full text-2xl flex-shrink-0"
+                >
+                  ⏰
+                </div>
+                <div>
+                  <h3 class="font-bold text-lg text-gray-900">
+                    Jam Operasional
+                  </h3>
+                  <p class="text-gray-600">Senin - Minggu: 09.00 - 22.00 WIB</p>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- Map Section -->
+          <div class="flex flex-col gap-4">
+            <div
+              class="rounded-2xl overflow-hidden shadow-lg border border-gray-200 h-96"
+            >
+              <iframe
+                src="https://maps.google.com/maps?q=jakarta&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                width="100%"
+                height="100%"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                title="Lokasi Restoran Lezat di Jakarta"
+              ></iframe>
+            </div>
+            <p class="text-center text-gray-600 text-sm">
+              Klik pada peta untuk navigasi langsung menggunakan Google Maps
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======== FOOTER ======== -->
+    <footer class="bg-gray-900 text-white text-center py-8">
+      <div class="max-w-7xl mx-auto px-6">
+        <p>&copy; 2025 Restoran Lezat. Semua hak dilindungi.</p>
+        <p class="text-gray-400 text-sm mt-2">
+          Dibuat dengan ❤️ untuk pelanggan setia kami
+        </p>
+      </div>
+    </footer>
+
+    <!-- Load external JavaScript -->
+    <script src="assets/js/main.js" defer></script>
+  </body>
+</html>
