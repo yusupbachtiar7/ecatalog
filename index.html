@@ -256,56 +256,58 @@
       </div>
     </section>
 
-    <!-- ======== PRODUCT PREVIEW MODAL ======== -->
-    <dialog
+    <!-- Modal -->
+    <div
       id="previewModal"
-      class="fixed inset-0 bg-black/50 hidden items-center justify-center z-50"
-      aria-labelledby="modalTitle"
+      class="hidden fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex justify-center items-center p-3 transition-opacity duration-300"
     >
-      <article
-        class="bg-white rounded-2xl shadow-2xl w-11/12 md:w-2/3 lg:w-1/2 overflow-hidden"
+      <div
+        class="bg-white rounded-3xl shadow-2xl w-full max-w-2xl p-6 relative flex flex-col overflow-y-auto max-h-[85vh] animate-fadeIn"
       >
-        <div class="grid md:grid-cols-2">
-          <div class="p-6 flex items-center justify-center bg-gray-100">
-            <img
-              id="modalImg"
-              src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="
-              alt="Preview"
-              class="max-h-96 object-cover rounded-lg"
-            />
-          </div>
-          <div class="p-8 flex flex-col gap-6">
-            <div>
-              <h3 id="modalTitle" class="text-2xl font-bold text-gray-900">
-                Nama Produk
-              </h3>
-              <p
-                id="modalBadge"
-                class="text-sm font-semibold text-yellow-600 mt-2"
-              ></p>
-            </div>
-            <p id="modalDesc" class="text-gray-600 leading-relaxed"></p>
-            <div class="flex gap-3 mt-auto">
-              <a
-                id="modalWA"
-                href="#"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="flex-1 bg-green-600 text-white px-4 py-3 rounded-xl font-semibold text-center hover:bg-green-700 transition"
-              >
-                Pesan via WhatsApp
-              </a>
-              <button
-                id="modalClose"
-                class="px-6 py-3 rounded-xl border-2 border-gray-300 hover:bg-gray-100 transition font-semibold"
-              >
-                Tutup
-              </button>
-            </div>
-          </div>
+        <!-- Close Button -->
+        <button
+          id="modalClose"
+          class="absolute top-4 right-4 text-gray-700 hover:text-gray-900 transition text-2xl font-bold"
+        >
+          &times;
+        </button>
+
+        <!-- Image -->
+        <img
+          id="modalImg"
+          src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+          alt="Preview menu"
+          class="w-full h-60 sm:h-72 md:h-80 object-cover rounded-xl mb-4 shadow-md"
+        />
+
+        <!-- Title & Badge -->
+        <div class="flex items-center justify-between mb-3">
+          <h3 id="modalTitle" class="text-2xl font-semibold text-gray-900">
+            Menu Preview
+          </h3>
+          <span
+            id="modalBadge"
+            class="px-3 py-1 rounded-full text-sm font-medium bg-yellow-100 text-yellow-800"
+          >
+            Badge
+          </span>
         </div>
-      </article>
-    </dialog>
+
+        <!-- Description -->
+        <p id="modalDesc" class="text-gray-600 mb-4 text-sm sm:text-base"></p>
+
+        <!-- Payment Methods -->
+        <div
+          id="modalPayment"
+          class="grid grid-cols-1 sm:grid-cols-1 gap-4 mt-4"
+        ></div>
+      </div>
+    </div>
+
+    <div
+      id="toastContainer"
+      class="fixed bottom-5 right-5 z-50 flex flex-col gap-2"
+    ></div>
 
     <!-- ======== LAYANAN / SERVICES ======== -->
     <section id="layanan" class="py-20 bg-white">
